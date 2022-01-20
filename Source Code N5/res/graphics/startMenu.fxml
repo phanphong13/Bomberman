@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="624.0" prefWidth="720.0" style="-fx-background-color: #F8CC50;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uet.oop.bomberman.menu.Menu">
+   <children>
+      <AnchorPane fx:id="slider" layoutX="200.0" layoutY="131.0" prefHeight="362.0" prefWidth="320.0">
+         <children>
+            <Label fx:id="playLabel" alignment="CENTER" layoutX="116.0" layoutY="25.0" text="PLAY">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="instructionLabel" layoutX="40.0" layoutY="95.0" onMouseClicked="#showInstruction" text="INSTRUCTION">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="leaderboardLabel" layoutX="32.0" layoutY="165.0" onMouseClicked="#showLeaderBoard" text="LEADERBOARD">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="aboutLabel" layoutX="99.0" layoutY="235.0" onMouseClicked="#showAbout" text="ABOUT">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView disable="true" fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/giphy.gif" />
+         </image>
+      </ImageView>
+      <Pane fx:id="instructPane" layoutX="200.0" prefHeight="624.0" prefWidth="520.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label layoutX="43.0" layoutY="111.0" text="Instruction">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Text layoutX="43.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use A, W, D, S to control Bomber" />
+            <Text layoutX="40.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- A to turn left" />
+            <Text layoutX="40.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- D to turn right" />
+            <Text layoutX="40.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- W to up" />
+            <Text layoutX="40.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- S to down" />
+         </children>
+      </Pane>
+      <Pane fx:id="leaderBoardPane" layoutX="200.0" prefHeight="624.0" prefWidth="520.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label text="LeaderBoard">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="aboutPane" layoutX="200.0" prefHeight="624.0" prefWidth="520.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label layoutX="180.0" layoutY="126.0" text="About">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <TextFlow layoutX="80.0" layoutY="219.0" prefHeight="200.0" prefWidth="327.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MSV: 20020438">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </TextFlow>
+         </children></Pane>
+   </children>
+</AnchorPane>
